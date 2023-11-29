@@ -42,11 +42,11 @@
         function acaoFrame1() {
             
             // Armazena em uma variável o valor de um determinado elemento (no caso, o TextArea) com base no seu Id.
-            const texto = document.getElementById("textoAreaFrame1").value;
+            var texto = document.getElementById("textoAreaFrame1").value;
 
             console.log(texto); //printing form data into the console
 
-            const frame2 = top.frame2.document.getElementById('textoFrame2');
+            var frame2 = top.frame2.document.getElementById('textoFrame2');
 
             frame2 = texto
 
@@ -55,11 +55,11 @@
         function acaoFrame2() {
             
             // Armazena em uma variável o valor de um determinado elemento (no caso, o TextArea) com base no seu Id.
-            const texto = top.frame2.document.getElementById("textoAreaFrame2").value;
+            var texto = top.frame2.document.getElementById("textoAreaFrame2").value;
 
             console.log(texto); //printing form data into the console
 
-            const frame1 = top.frame2.document.getElementById('textoFrame1');
+            var frame1 = top.frame2.document.getElementById('textoFrame1');
 
             frame1 = texto
 
