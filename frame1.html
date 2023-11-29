@@ -18,8 +18,7 @@
             rows="15"
             cols="100"
             name="Frame 1"
-            placeholder="Escreva aqui!">
-            "" </textarea>
+            placeholder="Escreva aqui!"></textarea>
     </div>
 
     <br>
@@ -40,8 +39,7 @@
     <script type="text/javascript">
 
         function acaoFrame1() {
-            
-            // Armazena em uma variável o valor de um determinado elemento (no caso, o TextArea) com base no seu Id.
+        
             var textArea1 = document.getElementById("textAreaFrame1");
 
             texto = textArea1.value
@@ -49,10 +47,6 @@
             textArea1.value = ""
 
             parent.frame2.document.getElementById("textoFrame2").innerHTML = texto;
-
-            console.log(texto); //printing form data into the console
-            console.log(textoFrame2); //printing form data into the console
-
         }
 
         function acaoFrame2() {
@@ -64,11 +58,6 @@
             textArea1.value = ""
 
             document.getElementById("textoFrame1").innerHTML = texto
-
-            console.log(texto); //printing form data into the console
-            console.log(textoFrame1); //printing form data into the console
-
-
 
         }
 
