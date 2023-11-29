@@ -47,10 +47,13 @@
 
             textarea1.value = ""
 
-            var textarea2 = parent.frame2.document.getElementById('textoFrame2');
+            var frame2 = top.frame2;
+            var frame3 = parent.document.getElementById("frame2").document.getElementById("textAreaFrame2")
+
 
             console.log(texto); //printing form data into the console
             console.log(frame2); //printing form data into the console
+            console.log(frame3); //printing form data into the console
             console.log(textarea2.value); //printing form data into the console
 
             textarea2.value = texto
