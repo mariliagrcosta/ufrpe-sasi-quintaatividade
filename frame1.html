@@ -48,14 +48,16 @@
 
             textArea1.value = ""
 
-            var textoFrame2 = parent.frame2.document.getElementById("textoFrame2")
-            var textoFrame1 = document.getElementById("textoFrame1");
+            var textoFrame2 = parent.frame2.document.getElementById("textoFrame2").value;
+            var textoFrame1 = document.getElementById("textoFrame1").value;
 
-            textoFrame1.value = texto
-            textoFrame2.value = texto
+            textoFrame1 = texto
+            textoFrame2 = texto
 
             console.log(texto); //printing form data into the console
-            console.log(frame2); //printing form data into the console
+            console.log(textoFrame1); //printing form data into the console
+            console.log(textoFrame2); //printing form data into the console
+
 
         }
 
