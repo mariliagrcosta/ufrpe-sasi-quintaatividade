@@ -47,8 +47,9 @@
 
             textarea1.value = ""
 
-            var frame2 = top.frame2;
-            var frame3 = parent.frame2.document.getElementById("textAreaFrame2")
+            var frame2 = parent.frame2.document.getElementById("textoFrame2")
+            
+            frame2.value = texto
 
 
             console.log(texto); //printing form data into the console
@@ -63,7 +64,16 @@
 
         function acaoFrame2() {
             
+            // Armazena em uma variável o valor de um determinado elemento (no caso, o TextArea) com base no seu Id.
+            var textarea1 = arent.frame2.document.getElementById("textAreaFrame2");
 
+            texto = textarea2.value
+
+            textarea2.value = ""
+
+            var frame1 = document.getElementById("textoFrame2")
+            
+            frame1.value = texto
 
         }
 
