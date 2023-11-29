@@ -18,8 +18,8 @@
             rows="15"
             cols="100"
             name="Frame 1"
-            placeholder="Escreva aqui!"> 
-        </textarea>
+            placeholder="Escreva aqui!">
+            "" </textarea>
     </div>
 
     <br>
@@ -48,19 +48,28 @@
 
             textArea1.value = ""
 
-            var textoFrame2 = parent.frame2.document.getElementById("textoFrame2").innerHTML;
-
-            textoFrame2 = texto
+            parent.frame2.document.getElementById("textoFrame2").innerHTML = texto;
 
             console.log(texto); //printing form data into the console
-            console.log(textoFrame1); //printing form data into the console
             console.log(textoFrame2); //printing form data into the console
-
 
         }
 
         function acaoFrame2() {
-            
+
+            var textArea2 = parent.frame2.document.getElementById("textAreaFrame2");
+
+            texto = textArea2.value
+
+            textArea1.value = ""
+
+            document.getElementById("textoFrame1").innerHTML = texto
+
+            console.log(texto); //printing form data into the console
+            console.log(textoFrame1); //printing form data into the console
+
+
+
         }
 
 
