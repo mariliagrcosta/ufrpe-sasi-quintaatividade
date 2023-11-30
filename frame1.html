@@ -5,26 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Frame 1</title>
 </head>
-<body id="bodyFrame1">
+<body>
+    < !-- Cabeçalho com o nome indicando o Frame >
     <h4 align="center">
         FRAME 1
     <h4>
-    
-    <br>
 
+    < !-- Espaçamento >
+    <br>
+    
+    < !-- Div que engloba o textArea no Frame 1-- >
     <div align="center" >
-        <textarea 
+        < !-- textArea do Frame 1-- >
+        <textarea
             id="textAreaFrame1"
             rows="15"
             cols="100"
             name="Frame 1"
             placeholder="Escreva aqui!"></textarea>
     </div>
-
+    
+    < !-- Espaçamento >
     <br>
     <br>
 
+    < !-- Div que engloba o botão do Frame 1-- >
     <div align="center" >
+        < !-- Função, acaoFrame1(), presente no Frame 1 é chamada quando o botão é clicado-- >
         <input id="botaoFrame1" type="button" value="ENVIAR INFORMAÇÃO" onclick="acaoFrame1()" />
     </div> 
 
@@ -32,31 +39,41 @@
         Isso foi o que você escreveu no TextArea do FRAME 1:
     <h4>
 
+    < !-- Texto que será alterado com base no que foi digitado no textArea do Frame 2-- >   
     <p id="textoFrame1" align="center" style="color:rgb(65, 119, 47)">
         NADA FOI ESCRITO NO FRAME 2
     </p>
 
     <script type="text/javascript">
 
+        //Função chamada quando o botão presente no Frame 1 é clicado
         function acaoFrame1() {
-        
+            
+            //textArea do Frame 1 é acessado por meio do seu Id
             var textArea1 = document.getElementById("textAreaFrame1");
 
+            //Valor informado no textArea do Frame 1 é armazenado na variável
             texto = textArea1.value
 
+            //Valor digitado na textArea do Frame 1 é "apagado"
             textArea1.value = ""
 
+            //O pai do Frame 1 é acessado, por meio do "parent", para que o Frame 2 seja acessado, por meio do "frame2" e o valor do texto presente no Frame 2, encontrado por meio do seu Id seja alterado, através do innerHTML.
             parent.frame2.document.getElementById("textoFrame2").innerHTML = texto;
         }
 
         function acaoFrame2() {
 
+            //O pai do Frame 2 é acessado, por meio do "parent", para que o Frame 1 seja acessado, por meio do "frame1" e o textArea presente no Frame 2 é acessado através do seu Id.
             var textArea2 = parent.frame2.document.getElementById("textAreaFrame2");
 
+            //Valor informado no textArea do Frame 2 é armazenado na 
             texto = textArea2.value
-
+            
+            //Valor digitado na textArea do Frame 2 é "apagado"
             textArea2.value = ""
 
+            //Valor do texto presente no Frame 1 seja acessado por meio do seu Id, através do innerHTML
             document.getElementById("textoFrame1").innerHTML = texto
 
         }
